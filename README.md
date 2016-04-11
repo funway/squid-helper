@@ -7,7 +7,7 @@ Digest authentication helper for squid 3.4+.
  - And finally send the info back to squid by sys.stdout.
 
 ### Version
-0.1.1
+0.1.0
 
 - Input line from squid:
 `"username":"realm" [key-extras]`
