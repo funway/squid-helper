@@ -17,3 +17,6 @@ Digest authentication helper for squid 3.4+.
     or `BH message="xxx"`
 - key-value in redis:
     `realm:username ==> ha1`
+
+### Usage in squid.conf
+`auth_param digest program /path_to/digest_redis_auth.py -f /path_to/logfile.log -l DEBUG`
