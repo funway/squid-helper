@@ -88,7 +88,9 @@ class DigestAuth(object):
                 sys.stdout.write('OK ha1="%s"\n' % ha1)
                 sys.stdout.flush()
             else:
-                sys.stdout.write('ERR message="digest_redis_auth: no such user"\n')
+                # it seems that squid-3.5 has a problem with ERR response. 
+                # so i have to use BH code to send back to squid
+                sys.stdout.write('BH message="digest_redis_auth: no such user"\n')
                 sys.stdout.flush()
             pass
         pass
