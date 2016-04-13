@@ -9,7 +9,7 @@ Digest authentication helper for squid 3.4+.
  - Then fetch the auth info from **redis-server**,  
  - And finally send the info back to squid by sys.stdout.
 
-###### input and output
+###### Input and output
 - Input line from squid:
 `"username":"realm" [key-extras]`
 - Output line send back to squid:
