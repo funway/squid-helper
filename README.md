@@ -1,4 +1,7 @@
-# digest_redis_auth
+# squid-helper
+Some external helper for squid 3.4+.
+
+### digest_redis_auth
 
 Digest authentication helper for squid 3.4+.
 
@@ -6,9 +9,7 @@ Digest authentication helper for squid 3.4+.
  - Then fetch the auth info from **redis-server**,  
  - And finally send the info back to squid by sys.stdout.
 
-### Version
-0.1.0
-
+###### input and output
 - Input line from squid:
 `"username":"realm" [key-extras]`
 - Output line send back to squid:
@@ -18,5 +19,7 @@ Digest authentication helper for squid 3.4+.
 - key-value in redis:
     `realm:username ==> ha1`
 
-### Usage in squid.conf
+###### Usage in squid.conf
 `auth_param digest program /path_to/digest_redis_auth.py -f /path_to/logfile.log -l DEBUG`
+
+### redis_login_ip_acl
